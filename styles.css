@@ -19,7 +19,7 @@ nav{
     font-size: 16px;
     font-weight: bold;
 }
-.btn:hover{
+.btn2:hover{
     background-color: seagreen;
     border: solid 3px;
 }
@@ -64,4 +64,5 @@ i{
 }
 #icon{
     font-size: 28px;
+    color: gray;
 }
