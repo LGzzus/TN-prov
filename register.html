@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
         <link rel="stylesheet" href="/styles.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     </head>
     <body class="sw-background-green">
         <!--Panel de navegacion-->
@@ -55,21 +57,21 @@
                     <div class="form-group ">
                         <div class="row">
                             <div class="col-1 col-lg-1 col-md-1 col-sm-1 text-right" id="icon"><i class="bi bi-lock"></i></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="C" id="char1" maxlength="1"></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="L" id="char2" maxlength="1"></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="A" id="char3" maxlength="1"></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="V" id="char4" maxlength="1"></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="E" id="char5" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw1" placeholder="C" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw1" placeholder="L" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw1" placeholder="A" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw1" placeholder="V" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw1" placeholder="E" maxlength="1"></div>
                         </div>
                     </div>
                     <div class="form-group ">
                         <div class="row">
                             <div class="col-2 col-lg-1 col-md-1 col-sm-1 text-right" id="icon"><i class="bi bi-check-all"></i></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="C" id="charv1" maxlength="1"></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="L" id="charv2" maxlength="1"></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="A" id="charv3" maxlength="1"></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="V" id="charv4" maxlength="1"></div>
-                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control" placeholder="E" id="charv5" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw2" placeholder="C" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw2" placeholder="L" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw2" placeholder="A" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw2" placeholder="V" maxlength="1"></div>
+                            <div class="col-2 col-lg-2 col-md-2 col-sm-2"><input type="text" class="form-control psw2" placeholder="E" maxlength="1"></div>
                         </div>
                     </div>
                 </div>
@@ -88,7 +90,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-right"><button class="btn btn-success" onclick="check()">Continuar</button></div>
+                    <div class="col text-right"><button class="btn btn-success" id="boton" onclick="save()">Continuar</button></div>
                     <div class="col "><input class="btn sw-btn-grey" type="reset" value="Cancelar"></div>
                 </div>
             </form>
